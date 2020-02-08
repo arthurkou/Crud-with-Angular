@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="titulo">Adiciona Chamado</h1>
+    <form (ngSubmit)="onSubmit()" [formGroup]="chamadoForm">
+        <label for="descricaoChamadoInputText">
+            Qual é o seu problema?
+        </label>
+        <input
+            formControlName="descricaoChamado" 
+            id="descricaoChamadoInputText" 
+            type="text"
+            required
+        />
+        <button [disabled]="!chamadoForm.valid" type="submit">Enviar</button>
+    </form>
+</div>
